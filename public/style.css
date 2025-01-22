@@ -24,7 +24,17 @@
   display: flex;
   background-color: var(--main-darklg);
 }
+#video_grid{
+  justify-content: center;
+  align-items: center;
+  display:flex
+}
+video{
+  height: 300px;
+  border-radius: 1rem;
+  width: 400px;
 
+}
 .options_button {
   display: flex;
   justify-content: center;
