@@ -70,6 +70,27 @@ $(function () {
         }
     })
 
+    $('#invite_button').click(function(){
+        const to=prompt('Enter email Address')
+        let data={
+            url:window.location.href,
+            to:to
+        }
+        $.ajax({
+            url:'/send-mail',
+            type:'post',
+            data:JSON.stringify(data),
+            dataType:'json',
+            contentType:'application/json',
+            success:function(result){
+                alert('invitation sent')
+            },
+            error:function(result){
+                console.log(result.responseJSON)
+            }
+        })
+    })
+
     $("#mute_button").click(function(){
 const enabled=myStream.getAudioTracks()[0].enabled
 if(enabled){
